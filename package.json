@@ -1,0 +1,22 @@
+{
+  "name": "notifyhub",
+  "version": "1.0.0",
+  "description": "A central service for managing and delivering notifications across various channels",
+  "main": "notificationSender.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bharathSaiT/NotifyHub.git"
+  },
+  "author": "bharath sai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bharathSaiT/NotifyHub/issues"
+  },
+  "homepage": "https://github.com/bharathSaiT/NotifyHub#readme",
+  "dependencies": {
+    "twilio": "^4.22.0"
+  }
+}
