@@ -1,11 +1,22 @@
+import { SMSService } from './services/smsService';
+import { EmailService } from './services/emailService';
+import { PushNotificationService } from './services/pushNotificationService';
+import { twilioConfig } from './twilioConfig'; // Twilio credentials
+import { emailConfig } from './config/emailConfig';// Email configuration
+import { pushConfig } from './config/pushNotificationConfig';
 
-// write a service which sends emails
+const smsService = new SMSService(twilioConfig.accountSid, twilioConfig.authToken, twilioConfig.twilioPhoneNumber);
+const emailService = new EmailService(emailConfig);
+const pushNotificationService = new PushNotificationService();
 
-// write a service which sends push notifications.
+//send notifications
+const recipientPhoneNumber = '+1234567890';
+const recipientEmail = 'recipient@example.com';
 
-//write a service which sends SMS.
+const smsMessage = 'Hello from your SMS notification service!';
+const emailSubject = 'Notification';
+const emailMessage = 'Hello from your email notification service!';
 
-
-
-// this service is 
-
+smsService.sendNotification(recipientPhoneNumber, smsMessage);
+emailService.sendNotification(recipientEmail, emailSubject, emailMessage);
+// pushNotificationService.sendNotification();
